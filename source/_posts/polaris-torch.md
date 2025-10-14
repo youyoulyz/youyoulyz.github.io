@@ -12,7 +12,7 @@ categories:
   - AMD
 ---
 
-Thanks:  https://github.com/nikos230 
+Thanks:  https://github.com/nikos230/Run-Pytorch-with-AMD-Radeon-GPU
 
 
 ![实施图片](images/polaris-torch-1.png)
