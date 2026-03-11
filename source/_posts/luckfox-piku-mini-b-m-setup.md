@@ -1,7 +1,7 @@
 ---
 title: Luckfox Pico Mini B/M开发板SD卡刷写与入门指南
-date: 2025-11-30 00:00:00
-tags: [LuckFox, RV1103, Embedded, Linux, Buildroot]
+date: 2026-03-11 18:00:00
+tags: [LuckFox, RV1103, Embedded]
 categories: 嵌入式
 ---
 
