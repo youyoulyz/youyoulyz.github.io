@@ -5,7 +5,7 @@ tags:
   - AWS
   - Docker
   - ECR
-  ---
+---
 
 AWS 提供了一个免费的公有容器注册表服务（ECR Public Gallery），可以用来托管公开镜像。相比其他私有源，这个方案完全免费且支持全球加速。
 
