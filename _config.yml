@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: youyoulyz的博客 | 上云就上悠悠云
+title: 代码与生活
 subtitle: 'Ek Jindri Meri'
 description: ''
 keywords:
@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://youyou.moe
+url: http://youyou.tech
 permalink: :year/:month/:title/
 permalink_defaults:
 pretty_urls:
