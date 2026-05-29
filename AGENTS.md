@@ -44,10 +44,17 @@ git checkout domestic
 
 ## 部署
 
-### domestic 分支
+### domestic 分支（自动）
+国内服务器已配置定时任务，每天 00:00 自动拉取 `domestic` 分支并重新部署。本地 push 到 `origin/domestic` 后，无需手动操作，次日凌晨自动生效。
+
+- **定时任务**: `0 0 * * * /home/hexo/deploy-hexo.sh`
+- **脚本路径**: `/home/hexo/deploy-hexo.sh`
+- **日志**: `/home/hexo/hexo-deploy.log`
+- **SSH 连接**: `ssh hexo`
+
+手动立即部署：
 ```bash
-git checkout domestic
-hexo generate && hexo deploy
+ssh hexo "cd youyoulyz.github.io && hexo clean && hexo generate && hexo deploy"
 ```
 
 ### main 分支（GitHub Pages）
