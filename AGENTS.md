@@ -21,8 +21,11 @@
 只同步 `source/_posts/` 下的 md 文件，不要碰 `_config.yml`、`themes/`、`source/CNAME`：
 
 ```bash
+# 在 domestic 分支写完文章后
 git checkout domestic
 git add source/_posts/文章.md && git commit -m "feat: add blog post xxx" && git push origin domestic
+
+# 同步到 main（只同步文章文件）
 git checkout main
 git checkout domestic -- source/_posts/文章.md
 git add source/_posts/文章.md && git commit -m "feat: add blog post xxx" && git push origin main
@@ -41,9 +44,17 @@ git checkout domestic
 
 ## 部署
 
-### domestic 分支
+### domestic 分支（自动）
+国内服务器已配置定时任务，每天 00:00 自动拉取 `domestic` 分支并重新部署。本地 push 到 `origin/domestic` 后，无需手动操作，次日凌晨自动生效。
+
+- **定时任务**: `0 0 * * * /home/hexo/deploy-hexo.sh`
+- **脚本路径**: `/home/hexo/deploy-hexo.sh`
+- **日志**: `/home/hexo/hexo-deploy.log`
+- **SSH 连接**: `ssh hexo`
+
+手动立即部署：
 ```bash
-git checkout domestic && hexo generate && hexo deploy
+ssh hexo "cd youyoulyz.github.io && hexo clean && hexo generate && hexo deploy"
 ```
 
 ### main 分支（GitHub Pages）
@@ -52,9 +63,9 @@ push 到 main 即自动部署。
 ## 常用命令
 
 ```bash
-hexo new post "标题"
-hexo server
-hexo generate
-hexo clean
-hexo deploy
+hexo new post "标题"    # 新建文章
+hexo server             # 本地预览
+hexo generate           # 生成静态文件 (hexo g)
+hexo clean              # 清理缓存
+hexo deploy             # 部署 (hexo d, 仅 domestic 分支配置了 deploy)
 ```
