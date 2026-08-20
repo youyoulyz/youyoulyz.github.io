@@ -105,7 +105,7 @@ helm upgrade ... -f runtime/values.yaml -f runtime/values.local.yaml
 
 ### 4. 安全姿态显性化
 
-README 新增一张 6 项表，把本地演示的"有意放宽"全部写明：dummy auth + allow_all、无 TLS（NodePort 明文）、`allowedOrigins: *`、Grafana admin/admin、notebook 容器带 sudo、hub 镜像 pullPolicy Never。这些不是 bug，是本地教学场景的有意取舍——**暴露公网前必须逐项处理**，文档里写清楚了每一项要做什么。
+README 新增一张 6 项表，把本地演示的"有意放宽"全部写明：dummy auth + allow_all、无 TLS（NodePort 明文）、`allowedOrigins: *`、Grafana 默认口令未改、notebook 容器带 sudo、hub 镜像 pullPolicy Never。这些不是 bug，是本地教学场景的有意取舍——**暴露公网前必须逐项处理**，文档里写清楚了每一项要做什么。
 
 ### 5. Git 历史清洗
 
